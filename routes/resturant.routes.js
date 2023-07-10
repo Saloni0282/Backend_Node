@@ -78,7 +78,7 @@ restaurantRouter.post('/api/restaurants/:id/menu', async (req, res) => {
 
 
 // Delete a menu item from a specific restaurant
-app.delete('/api/restaurants/:id/menu/:itemId', async (req, res) => {
+restaurantRouter.delete('/api/restaurants/:id/menu/:itemId', async (req, res) => {
     try {
         const { id, itemId } = req.params;
         const restaurant = await Restaurant.findById(id);
